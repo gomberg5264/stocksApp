@@ -1,0 +1,353 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+/* fonts */
+@font-face {
+  font-family: 'Quicksand';
+  src: url("/Quicksand-Light.woff2") format("woff2"), url("/Quicksand-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+/* reset & common styles */
+body,
+ul,
+h1,
+h2,
+h3,
+p,
+button,
+a,
+div {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+  list-style-type: none;
+  text-decoration: none; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (min-width: 90em) {
+    html {
+      font-size: 59%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 36%; } }
+  @media only screen and (max-width: 23.75em) {
+    html {
+      font-size: 36%; } }
+  @media only screen and (min-width: 150em) {
+    html {
+      font-size: 95%; } }
+
+body {
+  /* background: rgb(100, 0, 123); */
+  overflow: visible; }
+
+:root {
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-navbar-primary: #f4eeed;
+  --bg-navbar-secondary: #000000;
+  --bg-color-hp-primary: linear-gradient(to bottom, #e9d8d0, #d4c6c0, #bfb5b1, #aaa4a1, #969392);
+  --bg-color-hp-secondary: linear-gradient(to bottom, #e9d8d0, #aa9d99, #6e6565, #373334, #000000);
+  --bg-logo-primary: #e4e4e4;
+  --bg-logo-secondary: #141418;
+  --home-title-primary: black;
+  --home-title-secondary: white;
+  overflow-x: hidden; }
+  :root ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; }
+
+.signup__container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #212121; }
+
+.form {
+  width: 300px;
+  padding: 64px 15px 24px;
+  margin: 0 auto; }
+  .form .control {
+    margin: 3rem 0 24px; }
+    .form .control input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 0;
+      background: transparent;
+      color: #fff;
+      font-family: monospace, serif;
+      letter-spacing: 0.05em;
+      font-size: 16px; }
+      .form .control input:hover, .form .control input:focus {
+        outline: none;
+        border: 0; }
+  .form .btn {
+    width: 100%;
+    display: block;
+    padding: 14px 16px;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #fff;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 16px; }
+
+.block-cube {
+  position: relative; }
+  .block-cube .bg-top {
+    position: absolute;
+    height: 10px;
+    background: #020024;
+    background: linear-gradient(90deg, #020024 0%, #340979 37%, #00d4ff 94%);
+    bottom: 100%;
+    left: 5px;
+    right: -5px;
+    transform: skew(-45deg, 0);
+    margin: 0; }
+    .block-cube .bg-top .bg-inner {
+      bottom: 0; }
+  .block-cube .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #020024;
+    background: linear-gradient(90deg, #020024 0%, #340979 37%, #00d4ff 94%); }
+  .block-cube .bg-right {
+    position: absolute;
+    background: #020024;
+    background: #00d4ff;
+    top: -5px;
+    z-index: 0;
+    bottom: 5px;
+    width: 10px;
+    left: 100%;
+    transform: skew(0, -45deg); }
+    .block-cube .bg-right .bg-inner {
+      left: 0; }
+  .block-cube .bg .bg-inner {
+    transition: all 0.2s ease-in-out; }
+  .block-cube .bg-inner {
+    background: #212121;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    right: 2px;
+    bottom: 2px; }
+  .block-cube .text {
+    position: relative;
+    z-index: 2; }
+  .block-cube.block-input input {
+    position: relative;
+    z-index: 2; }
+    .block-cube.block-input input:focus ~ .bg-right .bg-inner,
+    .block-cube.block-input input:focus ~ .bg-top .bg-inner,
+    .block-cube.block-input input:focus ~ .bg-inner .bg-inner {
+      top: 100%;
+      background: rgba(255, 255, 255, 0.5); }
+  .block-cube.block-input .bg-top,
+  .block-cube.block-input .bg-right,
+  .block-cube.block-input .bg {
+    background: rgba(255, 255, 255, 0.5);
+    transition: background 0.2s ease-in-out; }
+  .block-cube.block-input .bg-right .bg-inner,
+  .block-cube.block-input .bg-top .bg-inner {
+    transition: all 0.2s ease-in-out; }
+  .block-cube.block-input:focus .bg-top,
+  .block-cube.block-input:focus .bg-right,
+  .block-cube.block-input:focus .bg, .block-cube.block-input:hover .bg-top,
+  .block-cube.block-input:hover .bg-right,
+  .block-cube.block-input:hover .bg {
+    background: rgba(255, 255, 255, 0.8); }
+  .block-cube.block-cube-hover:focus .bg .bg-inner, .block-cube.block-cube-hover:hover .bg .bg-inner {
+    top: 100%; }
+
+.navbar {
+  position: fixed;
+  background-color: var(--bg-navbar);
+  transition: width 600ms ease;
+  overflow: scroll;
+  scrollbar-width: none !important; }
+  .navbar ::-webkit-scrollbar {
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */ }
+
+.title {
+  margin-left: 1rem; }
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%; }
+
+.nav-item {
+  width: 100%; }
+
+.nav-item:last-child {
+  margin-top: auto; }
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed); }
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary); }
+
+.link-text {
+  display: none;
+  margin-left: 1rem; }
+
+.register {
+  color: #ff7eee; }
+
+.logout svg {
+  right: 2rem; }
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem; }
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed); }
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-logo);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%; }
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed); }
+
+.logo-text {
+  font-size: 1.4rem;
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed); }
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+  transform: translateX(2rem); }
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem; }
+  .logo {
+    display: none; }
+  .navbar-nav {
+    flex-direction: row; }
+  .nav-link {
+    justify-content: center; }
+  main {
+    margin: 0; } }
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh; }
+  .navbar:hover {
+    width: 16rem; }
+  .navbar:hover .link-text {
+    display: inline; }
+  .navbar:hover .logo svg {
+    margin-left: 11rem; }
+  .navbar:hover .logo-text {
+    left: 0px; } }
+
+.dark {
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418; }
+
+.light {
+  --text-primary: #1f1f1f;
+  --text-secondary: #000000;
+  --bg-primary: #ffffff;
+  --bg-secondary: #e4e4e4; }
+
+.solar {
+  --text-primary: #576e75;
+  --text-secondary: #35535c;
+  --bg-primary: #fdf6e3;
+  --bg-secondary: #f5e5b8; }
+
+.theme-icon {
+  display: none; }
+
+.dark #darkIcon {
+  display: block; }
+
+.light #lightIcon {
+  display: block; }
+
+.solar #solarIcon {
+  display: block; }
+
+.hp__cont {
+  background: var(--bg-color-hp);
+  margin-left: 5rem;
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden; }
+  .hp__cont__title-1 {
+    font-family: 'Patrick Hand SC', cursive;
+    color: var(--home-title);
+    margin: 10% 0 0 30%;
+    font-size: 4rem; }
+  .hp__cont__title-2 {
+    font-family: 'Patrick Hand SC', cursive;
+    color: var(--home-title);
+    margin: 3% 0 0 30%;
+    font-size: 2rem; }

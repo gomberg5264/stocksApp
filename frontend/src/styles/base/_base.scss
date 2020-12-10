@@ -1,0 +1,105 @@
+/* fonts */
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/Quicksand-Light.woff2') format('woff2'), url('/Quicksand-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/* reset & common styles */
+
+body,
+ul,
+h1,
+h2,
+h3,
+p,
+button,
+a,
+div {
+    margin: 0;
+    padding: 0;
+    // color: white;
+    //font-family: 'Quicksand';
+    //font-family: 'Walter Turncoat', cursive !important;
+    letter-spacing: 2px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    @include respond(small-desktop) {
+        font-size: 59%; //1rem = 12, 12/16
+    }
+    @include respond(tab-land) {
+        // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+    @include respond(tab-port) {
+        // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    @include respond(phone) {
+        // width < 900?
+        font-size: 36%; //1 rem = 8px, 8/16 = 50%
+    }
+    @include respond(small-phone) {
+        // width < 900?
+        font-size: 36%; //1 rem = 8px, 8/16 = 50%
+    }
+    @include respond(big-desktop) {
+        font-size: 95%; //1rem = 12, 12/16
+    }
+}
+
+body {
+    /* background: rgb(100, 0, 123); */
+    //background: radial-gradient( #9791a0 0%, #f030a6 100%);
+    overflow: visible;
+}
+
+// body::-webkit-scrollbar,
+// body::-webkit-scrollbar {
+//     width: 0.25rem;
+// }
+// body::-webkit-scrollbar-track {
+//     background: #1e1e24;
+// }
+// body::-webkit-scrollbar-thumb {
+//     background: #1f1f20;
+// }
+:root {
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-navbar-primary: #f4eeed;
+    --bg-navbar-secondary: #000000;
+    --bg-color-hp-primary: linear-gradient(to bottom, #e9d8d0, #d4c6c0, #bfb5b1, #aaa4a1, #969392);
+    --bg-color-hp-secondary: linear-gradient(to bottom, #e9d8d0, #aa9d99, #6e6565, #373334, #000000);
+    --bg-logo-primary: #e4e4e4;
+    --bg-logo-secondary: #141418;
+    --home-title-primary: black;
+    --home-title-secondary: white;
+     ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+    overflow-x: hidden;
+}
+
+// @media (prefers-color-scheme: dark) {
+//      :root {
+//         --text-primary: #f31818;
+//         --text-secondary: #ececec;
+//         --bg-primary: #1313fd;
+//         --bg-secondary: #87ee11;
+//         --dark-mode-back:  rgb(46, 5, 5);
+//          ::-webkit-scrollbar {
+//             width: 0px;
+//             background: transparent;
+//         }
+//     }
+// }
