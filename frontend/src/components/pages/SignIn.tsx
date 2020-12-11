@@ -42,6 +42,7 @@ export const SignIn: FC = () => {
             onChange={(e) => setEmail(e.currentTarget.value)}
             placeholder="Email address"
             label="Email address"
+            type="text"
           />
            <Input
             name="password"
@@ -49,6 +50,7 @@ export const SignIn: FC = () => {
             onChange={(e) => setPassword(e.currentTarget.value)}
             placeholder="Password"
             label="Password"
+            type="password"
           />
           <p><Link to="/forgot-password">Forgot Password ?</Link></p>
           <Button text={loading ? "Loading..." : "Sign In"} className="is-primary is-fullwidth mt-5" disabled={loading} />

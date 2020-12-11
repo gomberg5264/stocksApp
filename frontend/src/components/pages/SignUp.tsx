@@ -35,13 +35,14 @@ export const SignUp: FC = () => {
       <div className="container">
         <h2 className="has-text-centered is-size-2 mb-3">Sign Up</h2>
         <form className="form" onSubmit={submitHandler}>
-          {error && <Message type="danger" msg={error}/>}
+          {error && <Message type="danger" msg={error} />}
           <Input
             name="firstName"
             value={firstName}
             onChange={(e) => setFirstName(e.currentTarget.value)}
             placeholder="First Name"
             label="First name"
+            type="text"
           />
            <Input
             name="email"
@@ -49,6 +50,7 @@ export const SignUp: FC = () => {
             onChange={(e) => setEmail(e.currentTarget.value)}
             placeholder="Email address"
             label="Email address"
+            type="text"
           />
            <Input
             name="password"
@@ -56,6 +58,7 @@ export const SignUp: FC = () => {
             onChange={(e) => setPassword(e.currentTarget.value)}
             placeholder="Password"
             label="Password"
+            type="password"
           />
           <Button text={loading ? "Loading..." : "Sign Up"} className="is-primary is-fullwidth mt-5" disabled={loading} />
         </form>

@@ -1,0 +1,9 @@
+.db{
+    &__cont{
+        background: var(--bg-color-hp);
+        margin-left: 5rem;
+        width: 100%;
+        height: 100vh;
+        overflow-y: hidden;
+    }  
+}

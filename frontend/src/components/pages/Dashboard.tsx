@@ -17,11 +17,10 @@ useEffect(() => {
 
   console.log(user);
   return (
-    <section className="section">
-      <div className="container">
+      <div className="db__cont">
+      
         {needVerification && <Message type="success" msg="Please verify your email address." />}
         <h1 className="is-size-1">Welcome {user?.firstName}</h1>
       </div>
-    </section>
   );
 }

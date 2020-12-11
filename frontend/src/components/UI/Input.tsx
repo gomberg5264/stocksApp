@@ -2,9 +2,10 @@ import React, { FC, InputHTMLAttributes } from 'react';
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
+  type: string;
 }
 
-export const Input: FC<IInputProps> = ({ type = 'text', placeholder, value, name, onChange, label }) => {
+export const Input: FC<IInputProps> = ({ type, placeholder, value, name, onChange, label }) => {
   return (
       <div className='control block-cube block-input'>
         <label htmlFor={name}>{label}</label>

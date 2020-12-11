@@ -67,6 +67,10 @@ const lightTheme = [
   "--bg-navbar: var(--bg-navbar-primary)",
   "--bg-logo: var(--bg-logo-primary)",
   "--home-title: var(--home-title-primary)",
+  "--sign-btn: var(--sign-btn-primary)",
+  "--sign-btn-fontColor: var(--sign-btn-fontColor-primary)",
+  "--navLink-text: var(--navLink-text-primary)",
+  "--logoTitle: var(--logoTitle-primary)",
 ];
 
 const darkTheme = [
@@ -75,6 +79,10 @@ const darkTheme = [
   "--bg-navbar: var(--bg-navbar-secondary)",
   "--bg-logo: var(--bg-logo-secondary)",
   "--home-title: var(--home-title-secondary)",
+  "--sign-btn: var(--sign-btn-secondary)",
+  "--sign-btn-fontColor: var(--sign-btn-fontColor-secondary)",
+  "--navLink-text: var(--navLink-text-secondary)",
+  "--logoTitle: var(--logoTitle-secondary)",
 ];
 
 export default ThemeProvider;

@@ -11,19 +11,18 @@
         background: transparent;
         /* Optional: just make scrollbar invisible */
     }
-    // &::-webkit-scrollbar {
-    //     width: none;
-    // }
-    // &::-webkit-scrollbar-track {
-    //     background: #1e1e24;
-    // }
-    // &::-webkit-scrollbar-thumb {
-    //     background: #1f1f20;
-    // }
+    &:hover {
+        .logo>a>svg {
+            transform: rotate(180deg) translateX(-2rem) scale(0.8);
+            transition: var(--transition-speed);
+        }
+    }
 }
 
 .title {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
+    color: var(--logoTitle);
+    font-size: 1.3rem;
 }
 
 .navbar-nav {
@@ -57,22 +56,20 @@
 .nav-link:hover {
     filter: grayscale(0%) opacity(1);
     background: var(--bg-secondary);
-    color: var(--text-secondary);
+    
 }
 
 .link-text {
-    display: none;
-    margin-left: 1rem;
+    // margin-left: 1rem;
+    color: var(--navLink-text);
+    display: inline-block;
+    white-space: nowrap;
+   
 }
 
 .register {
     color: #ff7eee;
-    // font-size: 1rem;
-    // width: 3rem;
-    // margin-left: 1rem;
-    // margin-right: 1rem;
-    // background: white;
-    // height: 1rem;
+    display: inline;
 }
 
 .logout svg {
@@ -106,6 +103,7 @@
     font-size: 1.5rem;
     letter-spacing: 0.3ch;
     width: 100%;
+   
 }
 
 .logo svg {
@@ -115,7 +113,7 @@
 
 .logo-text {
     font-size: 1.4rem;
-    display: inline;
+    // display: inline;
     position: absolute;
     left: -999px;
     transition: var(--transition-speed);

@@ -7,8 +7,9 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 
 export const Button: FC<IButtonProps> = ({text,className,onClick,type,disabled}) => {
   return (
-    <button type={type} className="btn block-cube block-cube-hover" onClick={onClick} disabled={disabled}>
-      <div className='bg-top'>
+    <button type={type} className="btn" onClick={onClick} disabled={disabled}>
+      {text}
+      {/* <div className='bg-top'>
             <div className='bg-inner'/>
           </div>
           <div className='bg-right'>
@@ -18,8 +19,7 @@ export const Button: FC<IButtonProps> = ({text,className,onClick,type,disabled})
             <div className='bg-inner'/>
           </div>
           <div className='text'>
-            {text}
-          </div>
+          </div> */}
     </button>
     );
 }
