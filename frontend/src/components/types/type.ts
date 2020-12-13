@@ -34,5 +34,5 @@ export interface IStock {
 	wklo: string;
 	wklocm_adj: string;
 	xDt: string;
-	yPC: string;
+	yPC: number;
 }

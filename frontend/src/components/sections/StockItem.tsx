@@ -59,8 +59,12 @@ const StockItem: FC<IStockItemProps> = ({ data }) => {
           {data.ltP}
         </p>
         <p className="stockItem__cont-2__secB">
-          52 weeks return : {data.yPC}
-        </p>
+          {data.yPC > 0 ?
+            <p>52 weeks return : <span style={{color: 'green'}}>{ data.yPC}</span></p>
+            :
+            <p>52 weeks return : <span style={{color: 'red'}}>{ data.yPC}</span></p>
+          }
+          </p>
       </div>
       <StockItemModalButton data={data}/>
     </div>
