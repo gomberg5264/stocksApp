@@ -36,24 +36,15 @@
     margin: 2rem 0 0 0;
     padding: 1rem 0rem 1rem 0rem;
     height: 100%;
-    // width: 100%;
-    // position: fixed;
-    // top: 30px;
-    // left: 50%;
-    // transform: translate3d(-50%, 0, 0);
-    // background-color: gray;
     &__cont {
         height: 100%;
         width: 100%;
-        // background-color: black;
         &__btn {
             margin-left: 95%;
             &-x {
                 position: relative;
                 width: 2rem;
                 height: 2rem;
-                // margin: 0 0 0 2000%;
-                // transform: translateX(42rem);
                 border-radius: 100%;
                 cursor: pointer;
                 &:hover {
@@ -65,17 +56,13 @@
             padding: 0rem 2rem 0rem 2rem;
             display: flex;
             flex-wrap: wrap;
-            /*  allow items to wrap  */
             justify-content: space-between;
-            /*  vertical  */
             align-items: stretch;
-            .item {
-                font-size: 1.2rem;
+            &__item {
+                border-bottom: 1px solid rgb(184, 181, 181);
+                font-size: 1rem;
                 flex-basis: 43%;
-                /*  give each item a width  */
-                // background-color: #ccc;
-                line-height: 2rem;
-                // padding: 1rem 1rem 1rem 1rem;
+                line-height: 2.5rem;
                 box-sizing: border-box;
             }
         }

@@ -15,8 +15,8 @@ export interface IStock {
 	cAct: string;
 	dayEndClose: string;
 	high: string;
-	iislPercChange: string;
-	iislPtsChange: string;
+	iislPercChange: number;
+	iislPtsChange: number;
 	low: string;
 	ltP: string;
 	mPC: string;
@@ -25,7 +25,7 @@ export interface IStock {
 	open: string;
 	per: string;
 	previousClose: string;
-	ptsC: string;
+	ptsC: number;
 	symbol: string;
 	trdVol: string;
 	trdVolM: string;

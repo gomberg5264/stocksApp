@@ -313,15 +313,13 @@ body {
       padding: 0rem 2rem 0rem 2rem;
       display: flex;
       flex-wrap: wrap;
-      /*  allow items to wrap  */
       justify-content: space-between;
-      /*  vertical  */
       align-items: stretch; }
-      .modal-2__cont__info .item {
-        font-size: 1.2rem;
+      .modal-2__cont__info__item {
+        border-bottom: 1px solid #b8b5b5;
+        font-size: 1rem;
         flex-basis: 43%;
-        /*  give each item a width  */
-        line-height: 2rem;
+        line-height: 2.5rem;
         box-sizing: border-box; }
 
 :root {
@@ -332,26 +330,40 @@ body {
   visibility: hidden;
   position: relative;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%; }
 
 .stocks > * {
   visibility: visible; }
 
-.stocks:hover .nifty__cont {
+.stocks:hover .stocks__nifty__cont {
   filter: blur(3px);
   opacity: .5;
   transform: scale(0.98);
   box-shadow: none; }
 
-.stocks:hover .nifty__cont:hover {
+.stocks:hover .stockItem__cont {
+  filter: blur(3px);
+  opacity: .5;
+  transform: scale(0.98);
+  box-shadow: none; }
+
+.stocks:hover .stocks__nifty__cont:hover {
   transform: scale(1);
   filter: blur(0px);
   opacity: 1;
   box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125); }
 
-.nifty__cont {
+.stocks:hover .stockItem__cont:hover {
+  transform: scale(1);
+  filter: blur(0px);
+  opacity: 1;
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125); }
+
+.stocks__nifty__cont {
   z-index: 1;
-  position: absolute;
   margin: 5rem 5rem 2rem 5rem;
   padding: 1rem 1rem 1rem 1rem;
   border-radius: 10px;
@@ -361,97 +373,169 @@ body {
   background-color: white;
   cursor: pointer;
   box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25); }
-  .nifty__cont-1 {
+  .stocks__nifty__cont-1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 1rem 0 1rem; }
-    .nifty__cont-1__title {
+    .stocks__nifty__cont-1__title {
       display: none;
       margin: 0rem 0rem 0rem -8rem; }
-    .nifty__cont-1__img {
-      width: 15%;
-      height: 15%; }
-    .nifty__cont-1__ticker {
+    .stocks__nifty__cont-1__img {
+      width: 20%;
+      height: 100%; }
+    .stocks__nifty__cont-1__ticker {
       display: flex;
       flex-direction: column;
       padding: 0 1rem 0 0; }
-      .nifty__cont-1__ticker__ch {
+      .stocks__nifty__cont-1__ticker__ch {
         font-size: 1.5rem;
         font-weight: 900;
         display: flex;
         flex-direction: row; }
-      .nifty__cont-1__ticker__per {
+      .stocks__nifty__cont-1__ticker__per {
         margin-left: 0.5rem;
         font-size: 1.2rem;
         font-weight: 900; }
-  .nifty__cont-2 {
+      .stocks__nifty__cont-1__ticker .triangle--green {
+        color: green; }
+      .stocks__nifty__cont-1__ticker .triangle--red {
+        color: red;
+        transform: rotate(180deg); }
+  .stocks__nifty__cont-2 {
     margin: 1rem 0 0 0;
     padding: 1rem 1rem 0 1rem;
     border-top: 1px solid gray;
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
-    .nifty__cont-2__ltp {
+    .stocks__nifty__cont-2__ltp {
+      color: gray;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       margin: 1rem 0rem 0 0;
       font-size: 2rem;
       font-weight: 500; }
-    .nifty__cont-2__time {
+    .stocks__nifty__cont-2__time {
       margin: 1rem 0rem 0 0;
       font-size: 1rem;
       font-weight: 500; }
-  .nifty__cont__btnCont {
-    z-index: -1;
-    overflow: hidden;
-    position: absolute;
-    top: 1.25rem;
-    left: 1.25rem;
-    border-radius: 100%;
-    width: 0rem;
-    height: 0rem;
-    transform: translate(-50%, -50%);
-    transition: 0.35s cubic-bezier(0.25, 0, 0, 1); }
-    .nifty__cont__btnCont__btn {
-      display: grid;
-      place-items: center;
-      position: absolute;
-      width: 2rem;
-      height: 2rem;
-      border: none;
-      border-radius: 100%;
-      transform: translate(-50%, -50%);
-      cursor: pointer;
-      transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
-      box-shadow: 0 0 0rem -0.25rem var(--background); }
-      .nifty__cont__btnCont__btn:hover {
-        opacity: 0.8;
-        filter: url(#id-of-your-filter);
-        box-shadow: 0 0 1rem -0.25rem var(--background); }
-      .nifty__cont__btnCont__btn:first-child:nth-last-child(3):nth-child(1),
-      .nifty__cont__btnCont__btn:first-child:nth-last-child(3) ~ *:nth-child(1) {
-        left: 50%;
-        top: 15.625%; }
-      .nifty__cont__btnCont__btn:first-child:nth-last-child(3):nth-child(2),
-      .nifty__cont__btnCont__btn:first-child:nth-last-child(3) ~ *:nth-child(2) {
-        left: 25%;
-        top: 25%; }
-      .nifty__cont__btnCont__btn:first-child:nth-last-child(3):nth-child(3),
-      .nifty__cont__btnCont__btn:first-child:nth-last-child(3) ~ *:nth-child(3) {
-        left: 15.625%;
-        top: 50%; }
-  .nifty__cont:hover .nifty__cont__btnCont,
-  .nifty__cont .nifty__cont__btnCont:focus-within {
-    width: 10rem;
-    height: 10rem; }
 
-.stockItem__cont {
-  display: flex; }
-
-.stockItem__cont {
+.stocks__stockItem__cont {
+  visibility: hidden;
+  display: flex;
+  z-index: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden; }
+  flex-direction: column;
+  overflow-y: scroll; }
+  .stocks__stockItem__cont > * {
+    visibility: visible; }
+
+.stockItem__cont {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 5rem 2rem 5rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 10px;
+  transition: .5s all;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25); }
+  .stockItem__cont-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem 0 1rem; }
+    .stockItem__cont-1__secA {
+      font-size: 2rem;
+      font-weight: 900; }
+    .stockItem__cont-1__secB {
+      font-size: 1.2rem; }
+    .stockItem__cont-1__secC {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem 0 0; }
+      .stockItem__cont-1__secC__pts {
+        font-size: 1.5rem;
+        font-weight: 900;
+        display: flex;
+        flex-direction: row; }
+      .stockItem__cont-1__secC__per {
+        margin-left: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 900; }
+      .stockItem__cont-1__secC .triangle--green {
+        color: green; }
+      .stockItem__cont-1__secC .triangle--red {
+        color: red;
+        transform: rotate(180deg); }
+  .stockItem__cont-2 {
+    margin: 1rem 0 0 0;
+    padding: 1rem 1rem 0 1rem;
+    border-top: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .stockItem__cont-2__secA {
+      color: gray;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 1rem 0rem 0 0;
+      font-size: 2rem;
+      font-weight: 500; }
+    .stockItem__cont-2__secB {
+      margin: 1rem 0rem 0 0;
+      font-size: 1.2rem; }
+
+.stocks__btnCont {
+  overflow: hidden;
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  border-radius: 100%;
+  width: 0rem;
+  height: 0rem;
+  transform: translate(-50%, -50%);
+  transition: 0.35s cubic-bezier(0.25, 0, 0, 1); }
+  .stocks__btnCont__btn {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+    box-shadow: 0 0 0rem -0.25rem var(--background); }
+    .stocks__btnCont__btn:hover {
+      opacity: 0.5;
+      filter: url(#id-of-your-filter);
+      box-shadow: 0 0 1rem -0.25rem var(--background); }
+    .stocks__btnCont__btn:first-child:nth-last-child(3):nth-child(1),
+    .stocks__btnCont__btn:first-child:nth-last-child(3) ~ *:nth-child(1) {
+      left: 50%;
+      top: 15.625%; }
+    .stocks__btnCont__btn:first-child:nth-last-child(3):nth-child(2),
+    .stocks__btnCont__btn:first-child:nth-last-child(3) ~ *:nth-child(2) {
+      left: 25%;
+      top: 25%; }
+    .stocks__btnCont__btn:first-child:nth-last-child(3):nth-child(3),
+    .stocks__btnCont__btn:first-child:nth-last-child(3) ~ *:nth-child(3) {
+      left: 15.625%;
+      top: 50%; }
+
+.stocks__nifty__cont:hover .stocks__btnCont,
+.stocks__btnCont:focus-within {
+  width: 10rem;
+  height: 10rem; }
+
+.stockItem__cont:hover .stocks__btnCont,
+.stocks__btnCont:focus-within {
+  width: 10rem;
+  height: 10rem; }
 
 .hp__cont {
   background: var(--bg-color-hp);

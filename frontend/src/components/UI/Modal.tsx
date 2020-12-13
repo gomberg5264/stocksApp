@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { setSuccess } from '../../store/actions/authActions';
 import { RootState } from '../../store';
 import { useDispatch, useSelector } from 'react-redux';
-import {IUsers} from '../types/type';
+import {IUsers,IStock} from '../types/type';
 
 interface ISignInModalProps {
   showModal: boolean;
@@ -11,10 +11,15 @@ interface ISignInModalProps {
 }
 
 interface INiftyModalProps {
-  showModal: boolean;
-  setShowModal: any;
-  users: IUsers;
-  
+  showNiftyModal: boolean;
+  setNiftyShowModal: any;
+  users: IUsers; 
+}
+
+interface IStockItemModalProps {
+  showStockModal: boolean;
+  setStockShowModal: any;
+  data: IStock; 
 }
 
 const backdrop = {
@@ -69,11 +74,11 @@ export const SignInModal: FC<ISignInModalProps> = ({ showModal }) => {
 }
 
 
-export const NiftyModal: FC<INiftyModalProps> = ({ showModal, setShowModal, users }) => {
+export const NiftyModal: FC<INiftyModalProps> = ({ showNiftyModal, setNiftyShowModal, users }) => {
   
   return (
     <AnimatePresence>
-      {showModal && (
+      {showNiftyModal && (
         <motion.div className="modal-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -86,7 +91,7 @@ export const NiftyModal: FC<INiftyModalProps> = ({ showModal, setShowModal, user
             exit={{y: 15}}
           >
             <motion.div   
-              onClick={() => setShowModal(false)}
+              onClick={() => setNiftyShowModal(false)}
               className="modal-2__cont__btn"
             >
               <svg
@@ -149,3 +154,94 @@ export const NiftyModal: FC<INiftyModalProps> = ({ showModal, setShowModal, user
     </AnimatePresence>
   );
 }
+
+
+export const StockItemModal: FC<IStockItemModalProps> = ({ showStockModal, setStockShowModal, data }) => {
+  
+  return (
+    <AnimatePresence>
+      {showStockModal && (
+        <motion.div className="modal-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{opacity: 0}}
+        >
+          <motion.div
+            className="modal-2__cont"
+            initial={{ y: 50 }}
+            animate={{ y: 0 }}
+            exit={{y: 15}}
+          >
+            <motion.div   
+              onClick={() => setStockShowModal(false)}
+              className="modal-2__cont__btn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="modal-2__cont__btn-x"
+              >
+                <defs>
+                  <filter id="id-of-your-filter">
+                    <feColorMatrix
+                      color-interpolation-filters="sRGB"
+                      type="matrix"
+                      values="0 0 0 0 0
+                              0 0.50 0 0 0
+                              0 0 0.50 0 0
+                              0 0 0 1 0 "/>
+                  </filter>
+                  ...
+                </defs>
+                <path
+                  fill="#fff"
+                  d="M0 0h24v24H0V0z"
+                />
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+                />
+              </svg>
+            </motion.div>
+            <motion.div className="modal-2__cont__info">
+              <p className="modal-2__cont__info__item">
+                {data.iislPtsChange > 0 ?
+                  <p>One day return (Pts) : <span style={{color: 'green'}}>{ data.iislPtsChange}</span></p>
+                  :
+                  <p>One day return (Pts) : <span style={{color: 'red'}}>{ data.iislPtsChange}</span></p>
+                }
+              </p>
+              <p className="modal-2__cont__info__item">
+                {data.iislPtsChange > 0 ?  
+                  <p> One day return (%) : <span style={{color: 'green'}}>{ data.iislPercChange}%</span></p>
+                  :
+                  <p> One day return (%) : <span style={{color: 'red'}}>{ data.iislPercChange}%</span></p>
+                }
+              </p>
+              <p className="modal-2__cont__info__item">
+                High : { data.high}
+              </p>
+              <p className="modal-2__cont__info__item">
+                Low : { data.low}
+              </p>
+              <p className="modal-2__cont__info__item">
+                52 week high : { data.wkhi}
+              </p>
+              <p className="modal-2__cont__info__item">
+                52 week low : { data.wklo}
+              </p>
+              <p className="modal-2__cont__info__item">
+                Trd Vol (shares) : { data.trdVol} 
+              </p>
+              <p className="modal-2__cont__info__item">
+              Trd Vol (lacs) : { data.ntP}
+              </p>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      )}    
+    </AnimatePresence>
+  );
+}
+
