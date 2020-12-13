@@ -1,0 +1,157 @@
+:root {
+    --background: #FFFFFF;
+    --text: black;
+}
+
+.stocks {
+    visibility: hidden;
+    position: relative;
+}
+
+.stocks>* {
+    visibility: visible;
+}
+
+.stocks:hover .nifty__cont {
+    filter: blur(3px);
+    opacity: .5;
+    transform: scale(.98);
+    box-shadow: none;
+}
+
+.stocks:hover .nifty__cont:hover {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+    box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
+
+.nifty {
+    &__cont {
+        z-index: 1;
+        position: absolute;
+        margin: 5rem 5rem 2rem 5rem;
+        padding: 1rem 1rem 1rem 1rem;
+        border-radius: 10px;
+        transition: .5s all;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        cursor: pointer;
+        box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
+        // box-shadow: -1px 7px 27px 11px rgba(0, 0, 0, 0.22);
+        // -webkit-box-shadow: -1px 7px 27px 11px rgba(0, 0, 0, 0.22);
+        // -moz-box-shadow: -1px 7px 27px 11px rgba(0, 0, 0, 0.22);
+        // justify-content: space-around;
+        &-1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 1rem 0 1rem;
+            &__title {
+                display: none;
+                margin: 0rem 0rem 0rem -8rem;
+                // font-family: 'Arimo', sans-serif;
+            }
+            &__img {
+                width: 15%;
+                height: 15%;
+            }
+            &__ticker {
+                display: flex;
+                flex-direction: column;
+                padding: 0 1rem 0 0;
+                &__ch {
+                    font-size: 1.5rem;
+                    font-weight: 900;
+                    display: flex;
+                    flex-direction: row;
+                }
+                &__per {
+                    margin-left: 0.5rem;
+                    font-size: 1.2rem;
+                    font-weight: 900;
+                }
+            }
+        }
+        &-2 {
+            margin: 1rem 0 0 0;
+            padding: 1rem 1rem 0 1rem;
+            border-top: 1px solid gray;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &__ltp {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                margin: 1rem 0rem 0 0;
+                font-size: 2rem;
+                font-weight: 500;
+            }
+            &__time {
+                margin: 1rem 0rem 0 0;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+        &__btnCont {
+            z-index: -1;
+            overflow: hidden;
+            position: absolute;
+            top: 1.25rem;
+            left: 1.25rem;
+            border-radius: 100%;
+            // background-color: gray;
+            width: 0rem;
+            height: 0rem;
+            transform: translate(-50%, -50%);
+            transition: .35s cubic-bezier(0.25, 0, 0, 1);
+            &__btn {
+                display: grid;
+                place-items: center;
+                position: absolute;
+                width: 2rem;
+                height: 2rem;
+                border: none;
+                border-radius: 100%;
+                // background-color: black;
+                // background: var(--background);
+                // color: var(--text);
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+                transition: .25s cubic-bezier(0.25, 0, 0, 1);
+                box-shadow: 0 0 0rem -.25rem var(--background);
+                &:hover {
+                    opacity: 0.8;
+                    // color: black;
+                    filter: url(#id-of-your-filter);
+                    // filter: invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(1);
+                    //background: var(--text);
+                    //color: var(--background);
+                    box-shadow: 0 0 1rem -.25rem var(--background);
+                }
+                &:first-child:nth-last-child(3),
+                &:first-child:nth-last-child(3)~* {
+                    //If there are 3 children
+                    &:nth-child(1) {
+                        left: 50%;
+                        top: 15.625%;
+                    }
+                    &:nth-child(2) {
+                        left: 25%;
+                        top: 25%;
+                    }
+                    &:nth-child(3) {
+                        left: 15.625%;
+                        top: 50%;
+                    }
+                }
+            }
+        }
+        &:hover .nifty__cont__btnCont,
+        .nifty__cont__btnCont:focus-within {
+            //Hover or a button inside is focused
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+}

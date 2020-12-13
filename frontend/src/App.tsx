@@ -1,9 +1,8 @@
 import React, {useEffect, useState } from 'react';
 import './firebase/config'
 import './App.css'
-// import 'bulma/css/bulma.min.css'
+// import { AnimatePresence } from 'framer-motion';
 import ThemeProvider from './components/theme/Theme';
-import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Switch } from 'react-router-dom';
 
@@ -23,17 +22,9 @@ import { RootState } from './store';
 const App: React.FC = () => {
   const dispatch = useDispatch();
   const { loading } = useSelector((state: RootState) => state.auth);
-  const [users, setUserList] = useState();
+  const [showModal, setShowModal] = useState<boolean>(true);
 
-  useEffect(() => {
-    // Use [] as second argument in useEffect for not rendering each time
-    axios.get('http://localhost:4000/nse/get_index_stocks?symbol=nifty')
-    .then((response) => {
-        console.log(response.data);
-        setUserList( response.data );
-    });
-  }, []);
-  console.log(users);
+
 
   useEffect(() => {
     dispatch(setLoading(true));
@@ -60,14 +51,16 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <ThemeProvider>
+      {/* <AnimatePresence exitBeforeEnter={true} onExitComplete={() => setShowModal(false)}> */}
         <Header />
         <Switch>
           <PublicRoute path="/" component={Homepage} exact={true} />
           <PublicRoute path="/signup" component={SignUp} exact={true} />
           <PublicRoute path="/signin" component={SignIn} exact={true} />
           <PublicRoute path="/forgot-password" component={ForgotPassword} exact={true} />
-          <PrivateRoute path="/dashboard" component={Dashboard} exact={true} />
-        </Switch>
+          <PrivateRoute path="/dashboard" component={Dashboard} showModal={showModal} setShowModal={setShowModal} exact={true} />
+          </Switch>
+      {/* </AnimatePresence> */}
       </ThemeProvider>
     </BrowserRouter>
   );

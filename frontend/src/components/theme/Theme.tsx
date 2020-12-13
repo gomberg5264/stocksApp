@@ -71,6 +71,7 @@ const lightTheme = [
   "--sign-btn-fontColor: var(--sign-btn-fontColor-primary)",
   "--navLink-text: var(--navLink-text-primary)",
   "--logoTitle: var(--logoTitle-primary)",
+  "--border: var(--border-primary)",
 ];
 
 const darkTheme = [
@@ -83,6 +84,7 @@ const darkTheme = [
   "--sign-btn-fontColor: var(--sign-btn-fontColor-secondary)",
   "--navLink-text: var(--navLink-text-secondary)",
   "--logoTitle: var(--logoTitle-secondary)",
+  "--border: var(--border-secondary)",
 ];
 
 export default ThemeProvider;

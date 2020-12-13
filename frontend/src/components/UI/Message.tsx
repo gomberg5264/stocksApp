@@ -9,16 +9,16 @@ export const Message: FC<IMessageProps> = ({msg,type}) => {
   let typeClass = '';
   
   if (type === 'danger') {
-    typeClass = 'is-danger';
+    typeClass = 'msg__cont';
   }
 
   if (type === 'success') {
-    typeClass = 'is-success';
+    typeClass = 'success';
   }
   
   return (
-    <article className={ `message ${typeClass}`} >
-      <div className="message-body">{msg}</div>
+    <article className={typeClass}>
+      <div className="msg__cont__body">{msg}</div>
     </article>
   );  
 }

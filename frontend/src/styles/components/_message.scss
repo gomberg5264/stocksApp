@@ -1,0 +1,83 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.modal-1 {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    &__text {
+        color: black;
+    }
+}
+
+.msg__cont {
+    padding: 2rem 1rem 2rem 3rem;
+    background-color: white;
+    &__body {
+        font-size: 2rem;
+        color: red;
+    }
+}
+
+.modal-2 {
+    border-top: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0 0 0;
+    padding: 1rem 0rem 1rem 0rem;
+    height: 100%;
+    // width: 100%;
+    // position: fixed;
+    // top: 30px;
+    // left: 50%;
+    // transform: translate3d(-50%, 0, 0);
+    // background-color: gray;
+    &__cont {
+        height: 100%;
+        width: 100%;
+        // background-color: black;
+        &__btn {
+            margin-left: 95%;
+            &-x {
+                position: relative;
+                width: 2rem;
+                height: 2rem;
+                // margin: 0 0 0 2000%;
+                // transform: translateX(42rem);
+                border-radius: 100%;
+                cursor: pointer;
+                &:hover {
+                    filter: url(#id-of-your-filter);
+                }
+            }
+        }
+        &__info {
+            padding: 0rem 2rem 0rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            /*  allow items to wrap  */
+            justify-content: space-between;
+            /*  vertical  */
+            align-items: stretch;
+            .item {
+                font-size: 1.2rem;
+                flex-basis: 43%;
+                /*  give each item a width  */
+                // background-color: #ccc;
+                line-height: 2rem;
+                // padding: 1rem 1rem 1rem 1rem;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
