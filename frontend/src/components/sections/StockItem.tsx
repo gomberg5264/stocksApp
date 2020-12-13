@@ -1,13 +1,15 @@
 import React,{FC} from 'react'
-
+import { IStock } from '../types/type';
 interface IStockItemProps {
-  data: any;
+  data: IStock;
 }
 
 const StockItem: FC<IStockItemProps> = ({ data }) => {
   console.log(data);
   return (
-    <>{ }sads</>
+    <div className="stockItem__cont">
+      {data.symbol}
+    </div>
     );
 }
 

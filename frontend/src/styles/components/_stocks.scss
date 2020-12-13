@@ -6,6 +6,8 @@
 .stocks {
     visibility: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .stocks>* {
@@ -154,4 +156,11 @@
             height: 10rem;
         }
     }
+}
+
+.stockItem__cont {
+    // background-color: black;
+    // width: 100%;
+    // height: 100%;
+    display: flex;
 }

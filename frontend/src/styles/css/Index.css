@@ -330,7 +330,9 @@ body {
 
 .stocks {
   visibility: hidden;
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column; }
 
 .stocks > * {
   visibility: visible; }
@@ -443,6 +445,14 @@ body {
     width: 10rem;
     height: 10rem; }
 
+.stockItem__cont {
+  display: flex; }
+
+.stockItem__cont {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
 .hp__cont {
   background: var(--bg-color-hp);
   margin-left: 5rem;
@@ -470,7 +480,9 @@ body {
   overflow-y: hidden;
   display: flex; }
   .db__cont-1 {
-    flex: 0.5; }
+    flex: 0.5;
+    height: 100%;
+    width: 100%; }
   .db__cont-2 {
     flex: 0.6;
     border-left: 0.1rem solid var(--border); }
@@ -481,7 +493,7 @@ body {
   background-color: #212121; }
 
 .form {
-  width: 300px;
+  width: 40rem;
   padding: 64px 15px 24px;
   margin: 0 auto; }
   .form .control {

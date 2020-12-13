@@ -1,10 +1,9 @@
 import React,{FC, useState} from 'react'
-import { IUsers } from '../types/type';
+import { IUsers,IStock } from '../types/type';
 import nse from '../../icons/nse.jpg';
 // import { motion } from 'framer-motion';
 import {NiftyModal } from '../UI/Modal';
 import StockItem from './StockItem';
-// import StockItem from '../sections/StockItem';
 
 interface IStocksProps {
   users: IUsers
@@ -149,10 +148,10 @@ const Stocks: FC<IStocksProps> = ({ users }) => {
         </div>
         <NiftyModal users={users}  showModal={showModal} setShowModal={setShowModal} />
       </div>
-      {/* <div className="stockItem__cont">
-        {users.data.map((data: any) => <StockItem data={data} key={data}/>
+      <div className="stocks__cont">
+        {users.data.map((data: IStock,key:number) => <StockItem data={data} key={key}/>
         )}
-      </div> */}
+      </div>
     </div>
     );
 }
