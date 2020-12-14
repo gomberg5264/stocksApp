@@ -1,0 +1,24 @@
+.pf__cont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &__secA {
+        padding: 10rem 0 0 5rem;
+        font-size: 2rem;
+        &>h1 {
+            color: rgb(233, 227, 227);
+            font-size: 3rem;
+        }
+    }
+    &__secB {
+        padding: 5rem 7rem 0 5rem;
+        line-height: 4rem;
+        overflow-y: scroll;
+        &>span {
+            font-size: 2.5rem;
+            color: rgb(245, 245, 245);
+            // padding: 1rem 0rem 0 0;
+        }
+    }
+}

@@ -21,7 +21,7 @@ export const Header: FC = ()  => {
     <nav className="navbar">
       <ul className="navbar-nav">
       <li className="logo">
-        <a href="#" className="nav-link">
+        <div className="nav-link">
             <span className="link-text logo-text ">
               <Link className="title" to={!authenticated ? "/" : "/dashboard"}>StockFolio</Link>
             </span>
@@ -48,13 +48,13 @@ export const Header: FC = ()  => {
               />
             </g>
           </svg>
-        </a>
+        </div>
       </li>
 
       {!authenticated ?
         <>
           <li className="nav-item ">
-              <a href="#" className="nav-link"  onClick={ () => history.push('/signup')}>
+              <div className="nav-link"  onClick={ () => history.push('/signup')}>
                 <svg
                   width='24px'
                   height='24px'
@@ -66,11 +66,11 @@ export const Header: FC = ()  => {
                   />
                 </svg>
                 <span className="link-text">Register</span>
-            </a>
+            </div>
             </li>
             
             <li className="nav-item ">
-              <a href="#" className="nav-link" onClick={ () => history.push('/signin')}>
+              <div className="nav-link" onClick={ () => history.push('/signin')}>
                 <svg
                   width='24px'
                   height='24px'
@@ -82,12 +82,12 @@ export const Header: FC = ()  => {
                   />
                 </svg>
                 <span className="link-text">Log-In</span>
-            </a>
+            </div>
             </li>
           </>
           :        
             <li className="nav-item">
-              <a href="#" className="nav-link logout" onClick={ logoutClickHandler }>
+              <div className="nav-link logout" onClick={ logoutClickHandler }>
                 <svg
                   width='24px'
                   height='24px'
@@ -99,12 +99,12 @@ export const Header: FC = ()  => {
                   />
                 </svg>
                 <span className="link-text">Log-Out</span>
-              </a>
+              </div>
             </li>
         }
         
       <li className="nav-item">
-          <a href="#" className="nav-link logout"
+          <div className="nav-link logout"
             onClick={toggle}
           >
             <svg
@@ -118,7 +118,7 @@ export const Header: FC = ()  => {
               />
             </svg>
             <span className="link-text">Theme</span>
-        </a>
+        </div>
       </li>   
         
         {/* <svg src={a} alt="Register" className="register"/> */}

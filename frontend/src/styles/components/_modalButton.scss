@@ -25,6 +25,14 @@
             filter: url(#id-of-your-filter);
             box-shadow: 0 0 1rem -.25rem var(--background);
         }
+        &:first-child:nth-last-child(1),
+        &:first-child:nth-last-child(1)~* {
+            //If there is 1 child
+            &:nth-child(1) {
+                left: 25%;
+                top: 25%;
+            }
+        }
         &:first-child:nth-last-child(3),
         &:first-child:nth-last-child(3)~* {
             &:nth-child(1) {

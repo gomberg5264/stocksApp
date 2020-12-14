@@ -36,3 +36,39 @@ export interface IStock {
 	xDt: string;
 	yPC: number;
 }
+
+export interface IList {
+		cAct: string;
+		dayEndClose: string;
+		high: string;
+		iislPercChange: number;
+		iislPtsChange: number;
+		low: string;
+		ltP: string;
+		mPC: string;
+		mVal: string;
+		ntP: string;
+		open: string;
+		per: string;
+		previousClose: string;
+		ptsC: number;
+		symbol: string;
+		trdVol: string;
+		trdVolM: string;
+		wkhi: string;
+		wkhicm_adj: string;
+		wklo: string;
+		wklocm_adj: string;
+		xDt: string;
+		yPC: number;
+}
+
+export interface IUserData {
+	createdAt: {
+		nanoseconds: number;
+		seconds: number;
+	}; 
+	email: string;
+	firstName: string;
+	id: string;
+}

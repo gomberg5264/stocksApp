@@ -10,9 +10,21 @@
     "rules": {
         "ordered-imports": [false],
         "object-literal-sort-keys": [false],
-        "no-shadowed-variable": true,
+        "no-shadowed-variable": [
+            false,
+            {
+                "class": true,
+                "enum": true,
+                "function": true,
+                "interface": false,
+                "namespace": true,
+                "typeAlias": false,
+                "typeParameter": false
+            }
+        ],
         "jsx-no-lambda": false,
         "no-console": false
+
     },
     "jsRules": {
         "no-console": false

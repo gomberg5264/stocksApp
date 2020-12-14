@@ -3,9 +3,13 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import authReducer from './reducers/authReducer';
+import { todoReducer } from './reducers/listReducer';
+// import listReducer from './reducers/listReducer';
 
-const rootReducer = combineReducers({
-  auth: authReducer
+export const rootReducer = combineReducers({
+  auth: authReducer,
+  list: todoReducer
+  // list: listReducer
 });
 
 const store = createStore(
