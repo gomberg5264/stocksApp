@@ -11,7 +11,7 @@ interface IStocksProps {
 
 const Stocks: FC<IStocksProps> = ({ users }) => {
 
-  // console.log(users.data.map((item: any)  => item));
+  console.log(users.data.map((item: any)  => item));
   return (
     <div className="stocks">
       <div className="stocks__nifty__cont">

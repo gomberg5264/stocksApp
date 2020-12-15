@@ -1,40 +1,11 @@
-const a = 2323;
-export default a;
-
-// import * as MyTypes from "MyTypes";
 import { actionTypes, todoActions } from "../actions/listAction";
 import {StateType, ActionType } from "typesafe-actions";
-// 1 for store, 1 for reducer, 1 for action creators
-// export type ReducerState = StateType<typeof import("../reducers").default>;
 export type RootAction = ActionType<typeof todoActions>;
 import { rootReducer } from '../index';
 export type ReducerState = StateType<typeof rootReducer>;
 
 interface IStock {
   list: any
-  // cAct: string;
-	// dayEndClose: string;
-	// high: string;
-	// iislPercChange: number;
-	// iislPtsChange: number;
-	// low: string;
-	// ltP: string;
-	// mPC: string;
-	// mVal: string;
-	// ntP: string;
-	// open: string;
-	// per: string;
-	// previousClose: string;
-	// ptsC: number;
-	// symbol: string;
-	// trdVol: string;
-	// trdVolM: string;
-	// wkhi: string;
-	// wkhicm_adj: string;
-	// wklo: string;
-	// wklocm_adj: string;
-	// xDt: string;
-	// yPC: number;
 }
 
 interface IStocksModel {
@@ -48,31 +19,61 @@ export const initialState: IStocksModel = {
 export const todoReducer = (state: IStocksModel = initialState, action:  RootAction) => {
   switch (action.type) {
     case actionTypes.ADD: {
-      if (state.list.length < 10) {
-        return {
-          ...state,
-          list: [...state.list, action.payload]
-        }
-      }
-      else {
+       // tslint:disable-next-line
+       if (state.list.length > 9) {
         return {
           ...state,
         }
+       }
+       else {
+        let temp = 0;
+        /* tslint:disable-next-line */ // @ts-ignore
+         for (let i = 0; i < state.list.length; i++) { 
+          if (state.list[i] === action.payload) {
+            temp = temp + 1;
+          }
+        }
+         if (temp === 0) {
+           return {
+             ...state,
+             list: [...state.list, action.payload]
+           }
+         }
+         else {
+           return {
+             ...state,
+           }
+         }
       }
     }
-      
     case actionTypes.DELETE: {
       const oldList = [...state.list];
-      oldList.splice(action.payload, 1);
-      const newList = oldList;
-
-      return {
-        ...state,
-        list: newList
-      };
-    }
-    default:
-      return state;
+      if (oldList.length < 2) {
+        oldList.splice(action.payload, 1);
+        const newList = oldList;
+        return {
+          ...state,
+          list: newList
+        };
+      }
+      else
+      {
+        // tslint:disable-next-line
+        for (let i = 0; i < oldList.length; i++) {
+          /* tslint:disable-next-line */ // @ts-ignore
+          if (oldList[i].symbol === action.payload) {
+            /* tslint:disable-next-line */ // @ts-ignore
+            oldList.splice(i,1)[0];
+          }
+        }
+        return {
+          ...state,
+            list: oldList
+          };
+        }
+      }
+      default:
+        return state;
   }
 };
 

@@ -7,8 +7,10 @@ interface IStockItemProps {
   key: number
 }
 
-const StockItem: FC<IStockItemProps> = ({ data,key }) => {
-  // onsole.log(data);
+const StockItem: FC<IStockItemProps> = ({ data, key }) => {
+   /* tslint:disable-next-line */ // @ts-ignore
+  // const a = (data).JSON.stringify
+  // console.log(a);
   return (
     <div className="stockItem__cont">
       <div className="stockItem__cont-1">
@@ -21,7 +23,6 @@ const StockItem: FC<IStockItemProps> = ({ data,key }) => {
               `Previous Close: ${data.dayEndClose}` :
               `Previous Close : N/A`
             }
-            
           </p>
           <p className="stockItem__cont-1__secB-2">
             Open: {data.open}
@@ -63,15 +64,15 @@ const StockItem: FC<IStockItemProps> = ({ data,key }) => {
         <p className="stockItem__cont-2__secA">
           {data.ltP}
         </p>
-        <p className="stockItem__cont-2__secB">
+        <div className="stockItem__cont-2__secB">
           {data.yPC > 0 ?
             <p>52 weeks return : <span style={{color: 'green'}}>{ data.yPC}</span></p>
             :
             <p>52 weeks return : <span style={{color: 'red'}}>{ data.yPC}</span></p>
           }
-          </p>
+        </div>
       </div>
-      <StockItemModalButton data={data} key={ key}/>
+      <StockItemModalButton data={data} />
     </div>
   );
 }

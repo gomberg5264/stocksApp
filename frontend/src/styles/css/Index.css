@@ -567,7 +567,11 @@ body {
   .pf__cont__secB {
     padding: 5rem 7rem 0 5rem;
     line-height: 4rem;
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
     .pf__cont__secB > span {
       font-size: 2.5rem;
       color: whitesmoke; }

@@ -18,20 +18,20 @@ const Portfolio: FC<IPortfolioProps> = ({ user }) => {
     <>
       {list.length > 0 ? 
         <div className="pf__cont">
-        <p className="pf__cont__secA">
+        <div className="pf__cont__secA">
           <h1> {user.firstName}, Welcome to StockFolio!</h1>
-        </p>
+        </div>
           <div className="pf__cont__secB">
             
-            {list.map((list: IList, key: number) => <ListItem list={list} key={key} />
+            {list.map((list: IList, key: number) => <ListItem list={list} symbol={ list.symbol} key={ key}/>
         )}
           </div>
         </div>
         :
         <div className="pf__cont">
-          <p className="pf__cont__secA">
-          <h1> {user.firstName}, Welcome to StockFolio!</h1>
-        </p>
+          <div className="pf__cont__secA">
+            <h1> {user.firstName}, Welcome to StockFolio!</h1>
+          </div>
           <div className="pf__cont__secB">
               <span>
                   You do not own any stocks on our

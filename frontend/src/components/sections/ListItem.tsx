@@ -1,14 +1,16 @@
 import React,{FC} from 'react'
-import { IStock } from '../types/type';
-import {StockItemModalButton} from '../UI/ModalButton';
+// import { IStock } from '../types/type';
+import {PortfolioStockModalButton} from '../UI/ModalButton';
 import { IList } from '../types/type';
 
 interface IStockItemProps {
   list: IList;
+  symbol: string;
   key: number
 }
 
-const ListItem: FC<IStockItemProps> = ({ list,key }) => {
+const ListItem: FC<IStockItemProps> = ({ list,symbol }) => {
+  // console.log('symbol' + symbol);
   return (
     <div className="stockItem__cont">
       <div className="stockItem__cont-1">
@@ -63,15 +65,15 @@ const ListItem: FC<IStockItemProps> = ({ list,key }) => {
         <p className="stockItem__cont-2__secA">
           {list.ltP}
         </p>
-        <p className="stockItem__cont-2__secB">
+        <div className="stockItem__cont-2__secB">
           {list.yPC > 0 ?
             <p>52 weeks return : <span style={{color: 'green'}}>{ list.yPC}</span></p>
             :
             <p>52 weeks return : <span style={{color: 'red'}}>{ list.yPC}</span></p>
           }
-          </p>
+        </div>
       </div>
-      <StockItemModalButton data={list} key={ key}/>
+      <PortfolioStockModalButton data={list} symbol={ symbol}/>
     </div>
   );
 }
