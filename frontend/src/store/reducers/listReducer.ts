@@ -1,7 +1,7 @@
+import { rootReducer } from '../index';
 import { actionTypes, todoActions } from "../actions/listAction";
 import {StateType, ActionType } from "typesafe-actions";
 export type RootAction = ActionType<typeof todoActions>;
-import { rootReducer } from '../index';
 export type ReducerState = StateType<typeof rootReducer>;
 
 interface IStock {
@@ -63,7 +63,7 @@ export const todoReducer = (state: IStocksModel = initialState, action:  RootAct
           /* tslint:disable-next-line */ // @ts-ignore
           if (oldList[i].symbol === action.payload) {
             /* tslint:disable-next-line */ // @ts-ignore
-            oldList.splice(i,1)[0];
+            return oldList.splice(i,1)[0];
           }
         }
         return {

@@ -57,9 +57,9 @@
     "scripts": {
         "build:css": "node-sass src/styles/css/Index.scss  -o src/styles/css/ ",
         "watch:css": "npm run build:css && node-sass src/styles/css/Index.scss -o src/styles/css/ -w -r",
-        "start:js": "tsc -p tsconfig.production.json && react-scripts-ts start",
+        "start:js": "tsc -p tsconfig.production.json && react-scripts start",
         "start": "npm-run-all -p watch:css start:js",
-        "build:js": "react-scripts-ts build",
+        "build:js": "tsc -p tsconfig.production.json && react-scripts build",
         "build": "npm-run-all build:*",
         "test": "react-scripts-ts test --env=jsdom",
         "eject": "react-scripts-ts eject"

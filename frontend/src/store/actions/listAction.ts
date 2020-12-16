@@ -1,9 +1,5 @@
-const a = 2323;
-export default a;
-
 import { action } from "typesafe-actions";
 
-// use typescript enum rather than action constants
 export enum actionTypes {
   ADD = "ADD",
   DELETE = "DELETE"

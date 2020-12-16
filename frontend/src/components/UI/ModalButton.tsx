@@ -39,7 +39,7 @@ export const PortfolioStockModalButton: FC<IPortfolioStockModalButtonProps> = ({
           height="16"
           viewBox="0 0 16 16"
           className="stocks__btnCont__btn"
-          onClick={() => { dispatch(addList(data)),console.log('DATA' +data) }}
+          onClick={() => dispatch(addList(data))}
         >
           <defs>
             <filter id="id-of-your-filter">
@@ -67,7 +67,7 @@ export const PortfolioStockModalButton: FC<IPortfolioStockModalButtonProps> = ({
           height="24"
           viewBox="0 0 24 24"
           className="stocks__btnCont__btn"
-          onClick={() => { dispatch(deleteList(symbol)),console.log('SYM' +symbol) }}
+          onClick={() => dispatch(deleteList(symbol))}
         >
           <defs>
             <filter id="id-of-your-filter">
