@@ -2,7 +2,7 @@
 <br/>
 
 
-<img src="https://media.giphy.com/media/NiUZ6u0yDXSgP7dOmU/giphy.gif" width="400" height="400" />
+<img src="https://media.giphy.com/media/NiUZ6u0yDXSgP7dOmU/giphy.gif" width="800" height="600" />
 <!-- ![](https://s8.gifyu.com/images/video8d29ed33442648a0.gif | width=100) -->
 <!-- ![Alt Text](https://s8.gifyu.com/images/video8d29ed33442648a0.gif) -->
 <!-- ![StockFolio](https://github.com/utpandey/stocksApp/tree/main/frontend/src/icons/video.gif) -->
