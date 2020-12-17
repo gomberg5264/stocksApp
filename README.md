@@ -2,10 +2,10 @@
 <br/>
 
 
-<!-- <img src="https://s8.gifyu.com/images/video8d29ed33442648a0.gif" width="200" height="400" /> -->
+<img src="https://github.com/utpandey/stocksApp/tree/main/frontend/src/icons/video.gif" width="400" height="400" />
 <!-- ![](https://s8.gifyu.com/images/video8d29ed33442648a0.gif | width=100) -->
 <!-- ![Alt Text](https://s8.gifyu.com/images/video8d29ed33442648a0.gif) -->
-![StockFolio](https://github.com/utpandey/stocksApp/tree/main/frontend/src/icons/video.gif)
+<!-- ![StockFolio](https://github.com/utpandey/stocksApp/tree/main/frontend/src/icons/video.gif) -->
 <!-- [![video8d29ed33442648a0.gif](https://s8.gifyu.com/images/video8d29ed33442648a0.gif)](https://gifyu.com/image/0Plt) -->
 <!-- ![FindMyRepo Logo](https://media.giphy.com/media/bodGkqdk8nVs3pkCg5/giphy.gif ) -->
 <br/>
