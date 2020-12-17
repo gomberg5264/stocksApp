@@ -1,14 +1,13 @@
 .stockItem__cont {
     display: flex;
     flex-direction: column;
-    // background-color: black;
-    margin: 5rem 5rem 2rem 5rem;
+    margin: 5rem 8rem 2rem 8rem;
     padding: 1rem 1rem 1rem 1rem;
     border-radius: 10px;
     transition: .5s all;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--stock-container);
     cursor: pointer;
     box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
     &-1 {
@@ -17,27 +16,26 @@
         justify-content: space-between;
         padding: 0 1rem 0 1rem;
         &__secA {
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 2rem;
-            font-weight: 900;
             width: 10%;
         }
         &__secB {
             justify-content: center;
             font-size: 1.4rem;
-            // width: 0;
         }
         &__secC {
             display: flex;
             flex-direction: column;
             padding: 0 1rem 0 0;
             &__pts {
-                font-size: 1.5rem;
+                font-size: 2rem;
                 font-weight: 900;
                 display: flex;
                 flex-direction: row;
             }
             &__per {
-                margin-left: 0.5rem;
+                margin-left: 1.8rem;
                 font-size: 1.2rem;
                 font-weight: 900;
             }
@@ -59,17 +57,16 @@
         flex-direction: row;
         justify-content: space-between;
         &__secA {
-            color: gray;
+            color: rgb(75, 73, 73);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             margin: 1rem 0rem 0 0;
-            font-size: 2rem;
+            font-size: 2.3rem;
             font-weight: 500;
         }
         &__secB {
             margin: 1rem 0rem 0 0;
             padding: 0 1rem 0 0;
             font-size: 1.5rem;
-            // font-weight: 500;
         }
     }
 }

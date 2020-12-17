@@ -21,9 +21,10 @@
 }
 
 .title {
-    margin-left: 1.5rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-left: 2rem;
     color: var(--logoTitle);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .navbar-nav {
@@ -34,6 +35,7 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
+    // width: 50%;
 }
 
 .nav-item {
@@ -47,7 +49,7 @@
 .nav-link {
     display: flex;
     align-items: center;
-    height: 5rem;
+    height: 8rem;
     color: var(--text-primary);
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
@@ -61,10 +63,11 @@
 }
 
 .link-text {
-    // margin-left: 1rem;
+    font-family: 'IBM Plex Sans', sans-serif;
     color: var(--navLink-text);
     display: inline-block;
     white-space: nowrap;
+    font-size: 1.5rem;
 }
 
 .register {
@@ -79,7 +82,7 @@
 .nav-link svg {
     width: 2rem;
     min-width: 2rem;
-    margin: 0 1.5rem;
+    margin: 0 3rem 0 3rem;
 }
 
 // .fa-primary {
@@ -96,7 +99,7 @@
 .logo {
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    // margin: 0 0 1rem 50%;
     text-align: center;
     color: var(--text-secondary);
     background: var(--bg-logo);
@@ -106,7 +109,8 @@
 }
 
 .logo svg {
-    transform: rotate(0deg);
+    margin: 0 0 0 3rem;
+    transform: scale(1.5) rotate(0deg);
     transition: var(--transition-speed);
 }
 
@@ -152,17 +156,18 @@
 @media only screen and (min-width: 600px) {
     .navbar {
         top: 0;
-        width: 5rem;
+        width: 8rem;
         height: 100vh;
     }
     .navbar:hover {
-        width: 16rem;
+        width: 19rem;
     }
     .navbar:hover .link-text {
         display: inline;
     }
     .navbar:hover .logo svg {
-        margin-left: 11rem;
+        margin: 0 0 0.5rem 14rem;
+        transform: scale(1.15);
     }
     .navbar:hover .logo-text {
         left: 0px;

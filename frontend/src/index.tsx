@@ -4,6 +4,7 @@ import './styles/css/Index.css';
 import { Provider } from 'react-redux'
 import App from './App';
 import store from './store';
+import {saveState} from './store/localStorage'
 
 ReactDOM.render(
   <React.StrictMode>

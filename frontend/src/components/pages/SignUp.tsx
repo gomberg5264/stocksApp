@@ -30,11 +30,11 @@ export const SignUp: FC = () => {
   }
 
   return (
-    <div className="signup__container">
-    <section className="section">
-      <div className="container">
+    <div className="signup__cont">
+    <section className="signup__cont__section">
+      <div className="signup__cont__body">
         <h2 className="has-text-centered is-size-2 mb-3">Sign Up</h2>
-        <form className="form" onSubmit={submitHandler}>
+        <form className="signup__cont__form" onSubmit={submitHandler}>
           {error && <Message type="danger" msg={error} />}
           <Input
             name="firstName"
@@ -60,7 +60,7 @@ export const SignUp: FC = () => {
             label="Password"
             type="password"
           />
-          <Button text={loading ? "Loading..." : "Sign Up"} className="is-primary is-fullwidth mt-5" disabled={loading} />
+          <Button text={loading ? "Loading..." : "Sign Up"} className="btn" disabled={loading} />
         </form>
       </div>
       </section>

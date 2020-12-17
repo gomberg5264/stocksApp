@@ -32,10 +32,9 @@ export const ForgotPassword: FC = () => {
   }
 
   return (
-    <section className="section">
-      <div className="container">
-        <h2 className="has-text-centered is-size-2 mb-3">Reset Password</h2>
-        <form className="form" onSubmit={submitHandler}>
+    <div className="signup__cont">
+        <h2 className="">Reset Password</h2>
+        <form className="signup__cont__form" onSubmit={submitHandler}>
           {error && <Message type="danger" msg={error} />}
           {success && <Message type="success" msg={success}/>}
            <Input
@@ -46,9 +45,8 @@ export const ForgotPassword: FC = () => {
             label="Email address"
             type="text"
           />
-          <Button text={loading ? "Loading..." : "Send password reset email"} className="is-primary is-fullwidth mt-5" disabled={loading} />
+          <Button text={loading ? "Loading..." : "Send password reset email"} className="btn" disabled={loading} />
         </form>
       </div>
-    </section>
     );
 }

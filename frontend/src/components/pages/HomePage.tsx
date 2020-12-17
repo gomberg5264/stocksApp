@@ -41,11 +41,11 @@ export const Homepage: FC = () => {
         >
         {!authenticated ?
           <div className="">
-            <Button text="Sign Up" onClick={ () => history.push('/signup')} className=""/>
-            <Button text="Sign In" onClick={ () => history.push('/signin')} className=""/>
+            <Button  text="Sign Up" onClick={ () => history.push('/signup')} className="home--btn"/>
+            <Button  text="Sign In" onClick={ () => history.push('/signin')} className="home--btn"/>
           </div>
             :
-          <Button text="Sign Out" onClick={ logoutClickHandler } />
+          <Button  text="Sign Out" onClick={ logoutClickHandler } />
         }
         </motion.div>
     </div>

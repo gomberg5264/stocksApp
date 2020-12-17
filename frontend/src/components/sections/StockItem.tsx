@@ -8,9 +8,6 @@ interface IStockItemProps {
 }
 
 const StockItem: FC<IStockItemProps> = ({ data, key }) => {
-   /* tslint:disable-next-line */ // @ts-ignore
-  // const a = (data).JSON.stringify
-  // console.log(a);
   return (
     <div className="stockItem__cont">
       <div className="stockItem__cont-1">

@@ -8,7 +8,7 @@ interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
 export const Input: FC<IInputProps> = ({ type, placeholder, value, name, onChange, label }) => {
   return (
       <div className='control block-cube block-input'>
-        <label htmlFor={name}>{label}</label>
+        {/* <label htmlFor={name}>{label}</label> */}
         <input 
           className="input"
           color="red"

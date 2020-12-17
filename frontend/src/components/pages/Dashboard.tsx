@@ -30,23 +30,9 @@ export const Dashboard: FC = () => {
         setUserList(response.data);
       });
   }, []);
-  // useEffect(() => {
-  //   axios.get('http://localhost:4000/nse/get_index_stocks?symbol=nifty', {
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     }
-  //   })
-  //     .then((response) => {
-  //       setUserList(response.data);
-  //       // console.log(response.data);
-  //     });
-  // }, [users])
 
   if (users !== undefined) {
     console.log(user);
-    // console.log(user.email);
-    // console.log(user.firstName);
-    // console.log(user.id);
   }
   ;
 

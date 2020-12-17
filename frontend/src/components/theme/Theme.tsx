@@ -64,6 +64,7 @@ const ThemeProvider:FC<IThemeType> = ({ children }) => {
 const lightTheme = [
   "--bg-color: var(--color-white)",
   "--bg-color-hp: var(--bg-color-hp-primary)",
+  "--bg-color-not-hp: var(--bg-color-hp-primary)",
   "--bg-navbar: var(--bg-navbar-primary)",
   "--bg-logo: var(--bg-logo-primary)",
   "--home-title: var(--home-title-primary)",
@@ -72,11 +73,17 @@ const lightTheme = [
   "--navLink-text: var(--navLink-text-primary)",
   "--logoTitle: var(--logoTitle-primary)",
   "--border: var(--border-primary)",
+  "--input-box-bg: var(--input-box-bg-primary)",
+  "--input-box-border-1: var(--input-box-border-1-primary)",
+  "--input-box-border-2: var(--input-box-border-2-primary)",
+  "--stock-container: var(--stock-container-primary)",
+  "--modal-btn: var(--modal-btn-primary)",
 ];
 
 const darkTheme = [
   "--bg-color: var(--color-blue)",
   "--bg-color-hp: var(--bg-color-hp-secondary)",
+  "--bg-color-not-hp: var(--bg-color-not-hp-secondary)",
   "--bg-navbar: var(--bg-navbar-secondary)",
   "--bg-logo: var(--bg-logo-secondary)",
   "--home-title: var(--home-title-secondary)",
@@ -85,6 +92,11 @@ const darkTheme = [
   "--navLink-text: var(--navLink-text-secondary)",
   "--logoTitle: var(--logoTitle-secondary)",
   "--border: var(--border-secondary)",
+  "--input-box-bg: var(--input-box-bg-secondary)",
+  "--input-box-border-1: var(--input-box-border-1-secondary)",
+  "--input-box-border-2: var(--input-box-border-2-secondary)",
+  "--stock-container: var(--stock-container-secondary)",
+  "--modal-btn: var(--modal-btn-secondary)",
 ];
 
 export default ThemeProvider;

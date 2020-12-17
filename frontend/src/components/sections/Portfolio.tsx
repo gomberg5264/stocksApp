@@ -11,7 +11,6 @@ interface IPortfolioProps {
 }
 
 const Portfolio: FC<IPortfolioProps> = ({ user }) => {
-  // const [stockList, setStockList] = useState<any>('');
   const { list } = useSelector((state: ReducerState) => state.list);
   
   return (

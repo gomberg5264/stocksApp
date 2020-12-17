@@ -75,16 +75,17 @@ body {
 :root {
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
-    --bg-navbar-primary: #f4eeed;
+    --bg-navbar-primary: #cdc9c3;
     --bg-navbar-secondary: #000000;
-    --bg-color-hp-primary: linear-gradient(to bottom, #e9d8d0, #d4c6c0, #bfb5b1, #aaa4a1, #969392);
+    --bg-color-hp-primary: #fbf7f0;
     --bg-color-hp-secondary: linear-gradient(to bottom, #e9d8d0, #aa9d99, #6e6565, #373334, #000000);
-    --bg-logo-primary: #e4e4e4;
+    --bg-color-not-hp-secondary: #212121;
+    --bg-logo-primary: #555555;
     --bg-logo-secondary: #141418;
     --home-title-primary: black;
     --home-title-secondary: white;
     --sign-btn-primary: #aaaaaa;
-    --sign-btn-secondary: #534e52;
+    --sign-btn-secondary: #555555;
     --sign-btn-fontColor-primary: black;
     --sign-btn-fontColor-secondary: white;
     --navLink-text-primary: black;
@@ -93,6 +94,17 @@ body {
     --logoTitle-seondary: white;
     --border-primary: black;
     --border-secondary: white;
+    --input-box-bg-primary: #cdc9c3;
+    --input-box-bg-secondary: #ffffff00;
+    --input-box-border-1-primary: #cdc9c3;
+    --input-box-border-1-secondary: black;
+    --input-box-border-2-primary: #cdc9c3;
+    --input-box-border-2-secondary: rgba(255, 255, 255, 0.5);
+    --stock-container-primary: #a6a6a4;
+    --stock-container-secondary: #f6f5f5;
+    --modal-btn-primary: black;
+    --modal-btn-secondary: white;
+    /////////////////////////////////////////
      ::-webkit-scrollbar {
         width: 0px;
         background: transparent;

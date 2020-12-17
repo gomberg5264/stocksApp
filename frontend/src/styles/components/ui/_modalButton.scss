@@ -12,14 +12,15 @@
         display: grid;
         place-items: center;
         position: absolute;
-        width: 2rem;
-        height: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
         border: none;
         border-radius: 100%;
         transform: translate(-50%, -50%);
         cursor: pointer;
         transition: .25s cubic-bezier(0.25, 0, 0, 1);
         box-shadow: 0 0 0rem -.25rem var(--background);
+        color: var(--modal-btn);
         &:hover {
             opacity: 0.5;
             filter: url(#id-of-your-filter);
@@ -53,12 +54,12 @@
 
 .stocks__nifty__cont:hover .stocks__btnCont,
 .stocks__btnCont:focus-within {
-    width: 10rem;
-    height: 10rem;
+    width: 13rem;
+    height: 13rem;
 }
 
 .stockItem__cont:hover .stocks__btnCont,
 .stocks__btnCont:focus-within {
-    width: 10rem;
-    height: 10rem;
+    width: 13rem;
+    height: 13rem;
 }
