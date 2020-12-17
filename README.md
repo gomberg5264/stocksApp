@@ -1,7 +1,7 @@
 # StockFolio 
 <br/>
 
-<img src="https://s8.gifyu.com/images/video8d29ed33442648a0.gif" width="600" height="600" />
+<img src="https://s8.gifyu.com/images/video8d29ed33442648a0.gif" width="500" height="500" />
 <!-- [![video8d29ed33442648a0.gif](https://s8.gifyu.com/images/video8d29ed33442648a0.gif)](https://gifyu.com/image/0Plt) -->
 <!-- ![FindMyRepo Logo](https://media.giphy.com/media/bodGkqdk8nVs3pkCg5/giphy.gif ) -->
 <br/>
