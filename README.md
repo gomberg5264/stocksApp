@@ -1,7 +1,8 @@
 # StockFolio 
 <br/>
 
-![Alt Text](https://s8.gifyu.com/images/video8d29ed33442648a0.gif)
+![](https://s8.gifyu.com/images/video8d29ed33442648a0.gif | width=100)
+<!-- ![Alt Text](https://s8.gifyu.com/images/video8d29ed33442648a0.gif) -->
 <!-- <img src="https://s8.gifyu.com/images/video8d29ed33442648a0.gif" width="300" height="300" /> -->
 <!-- [![video8d29ed33442648a0.gif](https://s8.gifyu.com/images/video8d29ed33442648a0.gif)](https://gifyu.com/image/0Plt) -->
 <!-- ![FindMyRepo Logo](https://media.giphy.com/media/bodGkqdk8nVs3pkCg5/giphy.gif ) -->
