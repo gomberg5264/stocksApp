@@ -1,7 +1,9 @@
 # StockFolio 
 <br/>
 
-<img src="https://s8.gifyu.com/images/video8d29ed33442648a0.gif" width="500" height="500" />
+<!-- ![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif) -->
+[![video8d29ed33442648a0.md.gif](https://s8.gifyu.com/images/video8d29ed33442648a0.md.gif)](https://gifyu.com/image/0Plt)
+<!-- <img src="https://s8.gifyu.com/images/video8d29ed33442648a0.gif" width="300" height="300" /> -->
 <!-- [![video8d29ed33442648a0.gif](https://s8.gifyu.com/images/video8d29ed33442648a0.gif)](https://gifyu.com/image/0Plt) -->
 <!-- ![FindMyRepo Logo](https://media.giphy.com/media/bodGkqdk8nVs3pkCg5/giphy.gif ) -->
 <br/>
@@ -9,8 +11,8 @@
 
 ## Description
 
-StockFolio is a stock market (Nifty50) picker where one can make their portfolio based on Nifty50 stocks.
-This is a React,Redux,Typescript project with Scss, Framer motion and Firebase for authorization. The aim is with the help of firebase auth and stock market api one can build a simple mock portfolio.  
+StockFolio is a stock market (Nifty50) picker where one can build their portfolio based on the Nifty50 stocks.
+This is a React, Redux, Typescript project with Scss, Framer motion and Firebase. The aim is with the help of firebase auth and stock market api one can build a simple mock portfolio.  
 <!-- 
 ## :movie_camera: DEMO
 <p align="center">
@@ -63,7 +65,7 @@ This is a React,Redux,Typescript project with Scss, Framer motion and Firebase f
     ```
     Replace the above  with your own **key and id** .
 
-    > Refer this [official documentation regarding generating required keys for firebase auth](https://firebase.google.com/docs/web/setup)
+    > Refer this [official documentation regarding how to generate required keys for firebase auth](https://firebase.google.com/docs/web/setup)
 4. To start the development server run:
     ```
     npm start
