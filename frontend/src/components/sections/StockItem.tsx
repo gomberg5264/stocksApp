@@ -7,7 +7,7 @@ interface IStockItemProps {
   key: number
 }
 
-const StockItem: FC<IStockItemProps> = ({ data, key }) => {
+const StockItem: FC<IStockItemProps> = ({ data }) => {
   return (
     <div className="stockItem__cont">
       <div className="stockItem__cont-1">

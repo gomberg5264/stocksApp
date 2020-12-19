@@ -1,4 +1,4 @@
-import React, {FC, useState, useLayoutEffect } from "react";
+import React, {FC, useState, useLayoutEffect ,useEffect} from "react";
 
 interface IThemeType  {
   children: React.ReactNode
@@ -11,20 +11,26 @@ export const ThemeContext = React.createContext({
 });
 
 const ThemeProvider:FC<IThemeType> = ({ children }) => {
-  // keeps state of the current theme
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [localDark, setLocalDark] = useState(getMode);
+  const [dark, setDark] = useState(prefersDark || localDark);
 
-  const [dark, setDark] = useState(prefersDark);
+  useEffect(() => {
+    localStorage.setItem("dark", JSON.stringify(localDark));
+  }, [dark]);
 
-  // paints the app before it renders elements
+  function getMode() {
+    const savedmode = JSON.parse(localStorage.getItem("dark"));
+    return savedmode || false;
+  }
+
   useLayoutEffect(() => {
-    // Media Hook to check what theme user prefers
     applyTheme();
+    setLocalDark(!localDark);
     // if state changes, repaints the app
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dark]);
 
-  // rewrites set of css variablels/colors
   const applyTheme = () => {
     let theme;
     if (dark) {
@@ -40,8 +46,6 @@ const ThemeProvider:FC<IThemeType> = ({ children }) => {
 
   const toggle = () => {
     console.log("Toggle Method Called");
-
-    // A smooth transition on theme switch
     const body = document.getElementsByTagName("body")[0];
     body.style.cssText = "transition: background .5s ease";
 

@@ -1,6 +1,6 @@
 import React,{FC} from 'react'
 // import { IStock } from '../types/type';
-import {PortfolioStockModalButton} from '../UI/ModalButton';
+// import {PortfolioStockModalButton} from '../UI/ModalButton';
 import { IList } from '../types/type';
 
 interface IStockItemProps {
@@ -9,7 +9,7 @@ interface IStockItemProps {
   key: number
 }
 
-const ListItem: FC<IStockItemProps> = ({ list,symbol }) => {
+const ListItem: FC<IStockItemProps> = ({ list }) => {
   // console.log('symbol' + symbol);
   return (
     <div className="stockItem__cont">
@@ -73,7 +73,7 @@ const ListItem: FC<IStockItemProps> = ({ list,symbol }) => {
           }
         </div>
       </div>
-      <PortfolioStockModalButton data={list} symbol={ symbol}/>
+      {/* <PortfolioStockModalButton data={list} symbol={ symbol}/> */}
     </div>
   );
 }
