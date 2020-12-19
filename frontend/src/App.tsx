@@ -21,10 +21,8 @@ import { RootState } from './store';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
-  const { loading } = useSelector((state: RootState) => state.auth);
+  const loading  = useSelector((state: RootState) => state.auth.loading);
   const [showModal, setShowModal] = useState<boolean>(true);
-
-
 
   useEffect(() => {
     dispatch(setLoading(true));

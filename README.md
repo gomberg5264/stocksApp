@@ -3,17 +3,14 @@
 
 
 <!-- <img src="https://media.giphy.com/media/NiUZ6u0yDXSgP7dOmU/giphy.gif" width="800" height="600" /> -->
-<!-- ![](https://s8.gifyu.com/images/video8d29ed33442648a0.gif | width=100) -->
 ![StockFolio](https://media.giphy.com/media/NiUZ6u0yDXSgP7dOmU/giphy.gif)
-<!-- ![StockFolio](https://github.com/utpandey/stocksApp/tree/main/frontend/src/icons/video.gif) -->
-<!-- [![video8d29ed33442648a0.gif](https://s8.gifyu.com/images/video8d29ed33442648a0.gif)](https://gifyu.com/image/0Plt) -->
-<!-- ![FindMyRepo Logo](https://media.giphy.com/media/bodGkqdk8nVs3pkCg5/giphy.gif ) -->
+
 <br/>
-<!-- <img src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/> -->
+
 
 ## Description
 
-StockFolio is a stock market (Nifty50) picker where one can build their portfolio based on the Nifty50 stocks.
+StockFolio is a stock market (Nifty50) picker where one can build their portfolio from the Nifty50 stocks.
 This is a React, Redux, Typescript project with Scss, Framer motion and Firebase. The aim is with the help of firebase auth and stock market api one can build a simple mock portfolio.  
 <!-- 
 ## :movie_camera: DEMO

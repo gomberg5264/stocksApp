@@ -2,7 +2,8 @@ import React,{FC,useState} from 'react'
 import { NiftyModal, StockItemModal } from '../UI/Modal';
 import { IUsers, IStock } from '../types/type';
 import { useDispatch } from 'react-redux';
-import {addList,deleteList } from '../../store/actions/listAction';
+import { addList, deleteList } from '../../store/actions/listAction';
+import { add,del } from '../../store/reducers/newListReducer';
 interface INiftyModalButtonProps {
   users: IUsers;
 }
@@ -115,7 +116,7 @@ export const PortfolioStockModalButton: FC<IPortfolioStockModalButtonProps> = ({
 export const StockItemModalButton: FC<IStockItemModalButtonProps> = ({data}) => {
   const [showStockModal, setStockShowModal] = useState<boolean>(false);
   const dispatch = useDispatch();
-  
+  // console.log("data"+data);
   return (
     <React.Fragment>
       <div className="stocks__btnCont">
@@ -125,7 +126,7 @@ export const StockItemModalButton: FC<IStockItemModalButtonProps> = ({data}) => 
           height="16"
           viewBox="0 0 16 16"
           className="stocks__btnCont__btn"
-          onClick={() => dispatch(addList(data))}
+          onClick={() => dispatch(add(data))}
         >
           <defs>
             <filter id="id-of-your-filter">
@@ -152,7 +153,7 @@ export const StockItemModalButton: FC<IStockItemModalButtonProps> = ({data}) => 
           height="24"
           viewBox="0 0 24 24"
           className="stocks__btnCont__btn"
-          onClick={ () =>  dispatch(deleteList(data.symbol))}
+          onClick={ () =>  dispatch(del(data.symbol))}
         >
           <defs>
             <filter id="id-of-your-filter">

@@ -1,7 +1,7 @@
 import React,{FC} from 'react'
 import { IUsers,IUserData } from '../types/type';
 import { useSelector } from 'react-redux';
-import { ReducerState } from '../../store/reducers/listReducer';
+// import { ReducerState } from '../../store/reducers/listReducer';
 import ListItem from './ListItem';
 import { IList } from '../types/type';
 
@@ -11,20 +11,24 @@ interface IPortfolioProps {
 }
 
 const Portfolio: FC<IPortfolioProps> = ({ user }) => {
-  const { list } = useSelector((state: ReducerState) => state.list);
-  
+  const listItem = useSelector((state: any) => state.list);
+  console.log(listItem);
+  // const [listState, setState] = useState(listItem);
+  // return (
+  //   <>asdsad</>
+  // )
+  // console.log('sadsad'+ listState.length)
   return (
     <>
-      {list.length > 0 ? 
+      {listItem.length > 0 ? 
         <div className="pf__cont">
         <div className="pf__cont__secA">
           <h1> {user.firstName}, Welcome to StockFolio!</h1>
         </div>
           <div className="pf__cont__secB">
-            
-            {list.map((list: IList, key: number) => <ListItem list={list} symbol={ list.symbol} key={ key}/>
+            {listItem.map((list: IList, key: number) => <ListItem list={list} symbol={list.symbol} key={key}/>
         )}
-          </div>
+        </div>
         </div>
         :
         <div className="pf__cont">

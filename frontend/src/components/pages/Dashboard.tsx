@@ -31,10 +31,11 @@ export const Dashboard: FC = () => {
       });
   }, []);
 
-  if (users !== undefined) {
-    console.log(user);
-  }
-  ;
+  // if (users !== undefined) {
+  //   console.log(typeof (users)); 
+  //   console.log('userssss'+user);
+  // }
+  // ;
 
   return (
     <>
