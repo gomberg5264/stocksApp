@@ -21,6 +21,7 @@ export const Dashboard: FC = () => {
   }, [success, dispatch]);
 
   useLayoutEffect(() => {
+    console.log('useLayout')
     axios.get('http://localhost:4000/nse/get_index_stocks?symbol=nifty', {
       headers: {
         'Content-Type': 'application/json'
