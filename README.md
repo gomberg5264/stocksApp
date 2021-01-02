@@ -34,16 +34,25 @@ This is a React, Redux, Typescript project with Scss, Framer motion and Firebase
 * [Framer-Motion](https://www.framer.com/motion/)
 * [Scss](https://sass-lang.com/)
 
-
-<!-- #### Api
-* Github's GraphQL Api for querying user data : [Github API v4](https://docs.github.com/en/free-pro-team@latest/graphql) -->
-
 #### :grey_question: Prerequisite
 * [node](https://nodejs.org/en/) >= 12.19.1
 * [npm](https://www.npmjs.com/) >= 6.14.4
 
 ## :wrench: Installation
 
+### Api
+1. Clone / Download [this](https://github.com/utpandey/Nifty-Api) repo.
+2. Inside the project open a terminal and run:
+```
+npm install
+```
+
+3.After the project dependencies have been installed, run:
+```
+node app.js
+```
+
+### Frontend
 
 1. Clone / Download [this](https://github.com/utpandey/stocksApp) repo.
 2. Inside the project open a terminal and run:
